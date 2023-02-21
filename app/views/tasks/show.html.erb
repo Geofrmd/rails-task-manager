@@ -1,0 +1,14 @@
+
+<h2><%= @task.title.upcase %></h2>
+<p class='alert alert-primary'><strong><%= @task.details%></strong></p>
+
+
+
+<%= link_to "Back home", index_path, class: 'btn btn-primary' %>
+
+<%= link_to "Update task", edit_path, class: 'btn btn-success' %>
+
+<%= link_to "Delete",
+  task_path(@task),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: 'btn btn-danger'
+%>
